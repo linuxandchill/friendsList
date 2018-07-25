@@ -14,30 +14,36 @@ export class UserComponent implements OnInit {
   friends: string[];  
 
   constructor(private dataService:DataService) {
-    console.log("User component loaded")
+    console.log("User component loaded"); 
   }
 
   ngOnInit() {
     this.job = "dev";
     this.name = "johnson";
     this.email = "test@gmail.com"; 
-    this.address ={street:"jane", 
+    this.address = {
+      street:"jane", 
       num: 12,
       city: "philly",
       state: "CA", 
     }
+
     this.friends = ["john", "sally"]; 
+
+    this.dataService.getPosts.subscribe((posts) => {
+      console.log(posts)
+    }); 
+
   }
 
   onClick(){
-    this.name= "Paul Johnston"
-    console.log("CLICKED THE BUTTON ALKDSJF")
-
-  }
+    this.name= "Paul Johnston"; 
+    console.log("CLICKED THE BUTTON ALKDSJF"); 
+  } 
 
   addFriend(friend){
     this.friends.push(friend); 
-    return false;
+    return false; 
   }
 
   deleteFriend(friend){
@@ -47,6 +53,7 @@ export class UserComponent implements OnInit {
       }
     }
   }
+
 }
 
 interface Address{
