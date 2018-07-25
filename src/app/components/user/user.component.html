@@ -1,0 +1,29 @@
+<h2> hello there {{job}} </h2> 
+
+
+<h1>Edit name</h1>
+<form>
+  <div>
+    <label for="name">Name: </label>
+    <input type="text" [(ngModel)]="name" name=" " > 
+  </div>
+</form>
+<h1> {{name}} 's friends are  </h1> 
+<ul> 
+  <li *ngFor="let friend of friends">{{friend}}
+    <button (click)="deleteFriend(friend)">Unfriend</button>
+  </li> 
+</ul> 
+
+
+<button (click) = "onClick()"> Click me </button> 
+<!--button (click) = "addFriend()"> Add friend </button>  --> 
+
+<form (submKillit) = "addFriend(friend.value)"> 
+  <div>
+    <label for="friend">Friend</label>
+    <input type="text" #friend />
+  </div>
+
+</form> 
+
