@@ -13,8 +13,10 @@ export class UserComponent implements OnInit {
   address: Address ; 
   friends: string[];  
 
-  constructor(private dataService:DataService) {
+  constructor(dataService:DataService) {
     console.log("User component loaded"); 
+    let service = new DataService(); 
+    this.friends = service.getFriends(); 
   }
 
   ngOnInit() {
@@ -28,11 +30,6 @@ export class UserComponent implements OnInit {
       state: "CA", 
     }
 
-    this.friends = ["john", "sally"]; 
-
-    this.dataService.getPosts.subscribe((posts) => {
-      console.log(posts)
-    }); 
 
   }
 

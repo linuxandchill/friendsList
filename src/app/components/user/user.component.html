@@ -10,16 +10,23 @@
 </form>
 <h1> {{name}} 's friends are  </h1> 
 <ul> 
-  <li *ngFor="let friend of friends">{{friend}}
-    <button (click)="deleteFriend(friend)">Unfriend</button>
-  </li> 
+  <div *ngIf="friends.length>0; then friendsList else noFriends"> 
+  </div>
+  <ng-template #friendsList>
+    <li *ngFor="let friend of friends">
+      {{friend}}  <button (click)="deleteFriend(friend)">Unfriend</button>
+    </li> 
+  </ng-template>
+  <ng-template #noFriends >
+    <h2>No friends :( </h2>
+  </ng-template> 
 </ul> 
 
 
 <button (click) = "onClick()"> Click me </button> 
 <!--button (click) = "addFriend()"> Add friend </button>  --> 
 
-<form (submKillit) = "addFriend(friend.value)"> 
+<form (submit) = "addFriend(friend.value)"> 
   <div>
     <label for="friend">Friend</label>
     <input type="text" #friend />

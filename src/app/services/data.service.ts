@@ -1,19 +1,13 @@
 import { Injectable } from '@angular/core';
-import {Http} from '@angular/http'; 
-import { map } from 'rxjs/operators'; 
-
-@Injectable({
-  providedIn: 'root'
-})
+//import {Http} from '@angular/http'; 
 export class DataService {
 
-  constructor(public http:Http) {
+  constructor() {
     console.log("data service connected")
   }
 
-  getPosts(){
-    return this.http.get("https://jsonplaceholder.typicode.com/posts")
-      .pipe(map(res => res.json()))
+  getFriends(){
+    return ["jally", "joseph", "daisy"]
   }
 
 }
