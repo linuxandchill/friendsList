@@ -1,0 +1,11 @@
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'main'">
+    <h1>MAIN DISPLAY</h1> 
+  </div>
+  <div *ngSwitchCase="'alternate'">
+    ALTERNATE 
+  </div>
+  <div *ngSwitchDefault>
+    OTHER
+  </div>
+</div>
