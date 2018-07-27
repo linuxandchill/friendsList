@@ -9,7 +9,8 @@ import { UserComponent } from './components/user/user.component';
 import {DataService} from './services/data.service';
 import { BsPanelComponent } from './components/bs-panel/bs-panel.component'
 import { ProductComponent} from './components/product/product.component';
-import { ContactFormComponent } from './components/contact-form/contact-form.component'
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { PostsComponent } from './components/posts/posts.component'
 
 
 const appRoutes: Routes = [
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     UserComponent,
     BsPanelComponent,
     ProductComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule, 
