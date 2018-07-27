@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 import {DataService} from './services/data.service';
 import { BsPanelComponent } from './components/bs-panel/bs-panel.component'
-import { ProductComponent} from './components/product/product.component'
+import { ProductComponent} from './components/product/product.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component'
 
 
 const appRoutes: Routes = [
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
     AppComponent,
     UserComponent,
     BsPanelComponent,
-    ProductComponent
+    ProductComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule, 
